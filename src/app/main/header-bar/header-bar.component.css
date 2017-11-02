@@ -1,0 +1,41 @@
+.header{
+    width: 100%;
+    height: 3.2rem;
+    /* filter: blur(15px); */
+    background: #fff;
+    box-shadow: 0px 5px 5px #cecece;
+    /* border-bottom:1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headImg{
+    height: 2.8rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headImg img{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 5px;
+}
+
+.name{
+    margin-left: 0.6rem;
+    font-size: 17pt;
+    font-family: "楷体";
+}
+
+.messageBubble{
+    position: absolute;
+    top:-3px;
+}
+
+.msg{
+    position: relative;
+    margin-right: 1rem;
+}

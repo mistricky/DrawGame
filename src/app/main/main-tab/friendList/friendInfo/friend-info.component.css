@@ -1,0 +1,45 @@
+.friendInfo{
+    width:100%;
+    height:100%;
+    padding: 4rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.friendInfo p{
+    margin-bottom: 3rem;
+}
+
+.input{
+    width: 7rem;
+}
+
+/*好友显示表  */
+.infos{
+    width: 100%;
+    height: 100%;
+}
+.xitem{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.userInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.userInfo img{
+    height: 2.6rem;
+    display: block;
+    margin-right: 1rem;
+}
+.userName{
+    font-size: 15pt;
+}

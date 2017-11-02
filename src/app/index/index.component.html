@@ -1,0 +1,3 @@
+<button (click)="viewEntryBox();changeBtnName('登录');" class="login ui button positive">点击登录</button>
+<a (click)="viewEntryBox();changeBtnName('注册');" class="registe">还没注册？</a>
+<app-entry-box [btnName]="btnName" (emitHiddenEntry)="hiddenEntryBox()" *ngIf="entryIsView"></app-entry-box>

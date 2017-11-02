@@ -1,0 +1,11 @@
+<div class="header">
+  <div class="headImg">
+    <img src="../../../assets/imgs/headImg.jpg" alt="">
+    <p class="name">{{userName}}</p>
+  </div>
+  <div class="funcBlock">
+    <button (click)="linkMsgPane()" class="ui button teal msg">消息<div class="messageBubble ui red label" *ngIf="user.getMsgCount() == 0?false:true">{{user.getMsgCount()}}</div></button>
+    <button (click)="linkFriendList()" class="ui button">好友列表</button>
+    <button (click)="exitUser()" class="ui button yellow">注销</button>
+  </div>
+</div>

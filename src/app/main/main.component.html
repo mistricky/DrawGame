@@ -1,0 +1,6 @@
+<!-- 顶部信息条 -->
+<app-header-bar></app-header-bar>
+<!-- 页面主功能块 -->
+<main-tab></main-tab>
+
+<app-dialog *ngIf="isDialogView" [dialogModel]="dialogModel" (close)="close()"></app-dialog>

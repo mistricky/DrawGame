@@ -1,0 +1,32 @@
+:host{
+    width: 100%;
+    height: 100%;
+}
+.friendList{
+    width: 100%;
+    height: 80%;
+    background: #fff !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 2px #2c3e50;
+    position: relative;
+    border-radius: 5px;
+}
+
+.back{
+    width: 100%;
+    height: 3rem;
+    padding-top: 0.6rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.back img{
+    width: 2rem;
+    height: 2rem;
+}

@@ -1,0 +1,14 @@
+<div class="box">
+    <div class="item" *ngFor="let user of friendList">
+        <div class="userInfo">
+            <img src="../../assets/imgs/headImg.jpg" alt="">
+            <div class="info">
+                <p #userName class="userName">{{user.user}}</p>
+                <button class="ui button isLine" [class.green]="user.isLine">{{user.isLine?"在线":"离线"}}</button>
+            </div>
+        </div>
+        <div class="btn">
+            <button (click)="sendRequest(userName.innerText)" class="ui button positive">邀请</button>
+        </div>
+    </div>
+</div>

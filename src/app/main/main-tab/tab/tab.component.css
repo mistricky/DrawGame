@@ -1,0 +1,63 @@
+.mainBlock{
+    display: flex;
+    width: 100%;
+}
+
+.blockHeight{
+    height: 18rem;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 3px #2c3e50;
+}
+
+.img{
+    /* background-size: 100% 100%;  */
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.alone{
+    flex:2;
+    margin-right:1rem;
+    background: #1abc9c;
+    border-radius: 10px;
+    background-image: url("../../../../assets/imgs/alone.jpg");
+    /* background-size: 100% 100%;  */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.friend{
+    flex:1;
+    background: #1abc9c;
+    border-radius: 10px;
+    background-image: url("../../../../assets/imgs/friend.jpg");
+    /* background-size: 100% 100%;  */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.solo{
+    flex:1;
+    margin-left:1rem;
+    background: #1abc9c;
+    border-radius: 10px;
+    background-image: url("../../../../assets/imgs/solo.jpg");
+    /* background-size: 100% 100%;  */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@font-face{
+    font-family: "毛笔字";
+    src: url("../../../../assets/fonts/啊啊啊.ttf") format("truetype");
+}
+
+.aloneText{
+    font-family: "毛笔字";
+    font-size: 50pt;
+    color: white;
+}

@@ -1,0 +1,18 @@
+<div class="friendInfo">
+    <div class="infos" *ngIf="isViewFriendList">
+        <!-- items  -->
+        <div class="xitem" *ngFor="let val of friendList">
+            <!--用户信息  -->
+            <div class="userInfo">
+                <img src="../../../../assets/imgs/headImg.jpg" alt="">
+                <span class="userName">{{val.user}}</span>
+            </div>
+            <!--发送信息按钮  -->
+            <div>
+                <button class="ui button" [class.green]="val.isLine">{{val.isLine?"在线":"离线"}}</button>
+                <div (click)="btnClick()" class="ui button sendBtn positive">{{btnName}}</div>
+            </div>
+        </div>
+    </div>
+    <p *ngIf="!isViewFriendList">{{pName}}</p>
+</div>

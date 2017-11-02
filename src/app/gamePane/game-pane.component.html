@@ -1,0 +1,41 @@
+<div class="box">
+    <div #content class="content">
+        <canvas #canvas ></canvas>
+    </div>
+</div>
+
+<div (click)="popAnswer()" class="rightArrow">
+    <img src="../../assets/imgs/arrow.png" alt="">
+</div>
+
+<!--工具  -->
+<div class="tools">
+    <div>
+        <div class="pencil" (click)="changeLine($event,'pencil')" ><img src="../../assets/imgs/pencil.png" alt=""></div>
+        <div class="eraser" (click)="changeLine($event,'eraser')" ><img src="../../assets/imgs/eraser.png" alt=""></div>
+        <div class="make" (click)="changeLine($event,'make')" ><img src="../../assets/imgs/make.png" alt=""></div>
+        <div class="make" (click)="changeLine($event,'rainbow')" ><img src="../../assets/imgs/rainbow.png" alt=""></div>
+        <div id="bar" [style.top.px]="toolSelectorLocation"><div></div></div>
+    </div>
+</div> 
+
+<!--颜色选择器  -->
+<div class="colorSelector">
+    <div>
+        <a (click)="changeColor('red')" class="ui red circular label"></a>
+        <a (click)="changeColor('orange')" class="ui orange circular label"></a>
+        <a (click)="changeColor('yellow')" class="ui yellow circular label"></a>
+        <a (click)="changeColor('olive')" class="ui olive circular label"></a>
+        <a (click)="changeColor('green')" class="ui green circular label"></a>
+        <a (click)="changeColor('teal')" class="ui teal circular label"></a>
+        <a (click)="changeColor('blue')" class="ui blue circular label"></a>
+        <a (click)="changeColor('violet')" class="ui violet circular label"></a>
+        <a (click)="changeColor('purple')" class="ui purple circular label"></a>
+        <a (click)="changeColor('pink')" class="ui pink circular label"></a>
+        <a (click)="changeColor('brown')" class="ui brown circular label"></a>
+        <a (click)="changeColor('grey')" class="ui grey circular label"></a>
+        <a (click)="changeColor('black')" class="ui black circular label"></a>
+    </div>
+</div>
+
+<app-dialog (getInputValue)="getInputValue(data)" *ngIf="isDialogView" [dialogModel]="dialogModel" (close)="close()"></app-dialog>

@@ -1,0 +1,22 @@
+<div class="dialogBox">
+    <div class="dialog">
+        <div class="head">
+            <p class="title">{{dialogModel.title}}</p>
+        </div>
+        <div class="message">
+            <img #loading *ngIf="dialogModel.isViewImg" src="../../assets/imgs/loading.png" alt="">
+            <p *ngIf="!dialogModel.isInputView">{{dialogModel.message}}</p>
+            <div *ngIf="dialogModel.isInputView">
+                <div class="ui label medium" for="">请输入您的答案</div>
+                <div class="ui input answer">
+                    <input [(ngModel)]="answerContent" #i type="text"/>
+                </div>       
+            </div>        
+        </div>
+        <div class="operas">
+            <button [ngClass]="dialogModel.btn1.color" *ngIf="btn1IsView" class="ui button" (click)="dialogModel.btn1.func(answerContent);closed()">{{dialogModel.btn1.title}}</button>
+            <button [ngClass]="dialogModel.btn2.color" *ngIf="btn2IsView" class="ui button" (click)="dialogModel.btn2.func();closed()">{{dialogModel.btn2.title}}</button>
+            <button [ngClass]="dialogModel.btn3.color" *ngIf="btn3IsView" class="ui button" (click)="dialogModel.btn3.func();closed()">{{dialogModel.btn3.title}}</button>
+        </div>
+    </div>
+</div>

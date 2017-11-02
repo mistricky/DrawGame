@@ -1,0 +1,27 @@
+<div class="box">
+    <div (click)="close()" class="back">
+        <img src="../../assets/imgs/back.png" alt="">
+    </div>
+    <div class="headBar">
+        <div class="ui massive label">
+            好友组队
+        </div>
+    </div>
+    <div class="leftContainer">
+        <div class="userCount">
+            <div *ngFor="let user of userInfo">
+                <img id="king" src="../../assets/imgs/king.png" alt="" *ngIf="userInfo.indexOf(user) == 0">
+                <div class="user"><img src="{{user.headImg}}" alt=""></div>
+                <p class="userName">{{user.userName}}</p>
+            </div>
+        </div>
+        <div class="startContainer">
+            <button class="button ui positive" (click)="match()">开始匹配</button>
+        </div>
+    </div>
+    <div class="rightContainer">
+        <lite-friend-list (sendRequestToFriend)="sendRequestToFriend($event)"></lite-friend-list>
+    </div>
+</div>
+
+<app-dialog *ngIf="isDialogView" [dialogModel]="dialogModel" (close)="close()"></app-dialog>

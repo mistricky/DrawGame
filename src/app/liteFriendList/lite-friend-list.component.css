@@ -1,0 +1,49 @@
+.box{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    padding-top: 1rem;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.userInfo img{
+    width:4rem;
+    height:4rem;
+}
+.userName{
+    width: 4rem;
+    height:2rem;
+    margin:0;
+}
+.button{
+    height:2rem;
+    margin:0px !important;
+    padding: 0px !important;
+}
+.btn{
+    height:4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    padding-right: 0px;
+}
+.btn button{
+    width:4rem;
+    height:4rem;
+}

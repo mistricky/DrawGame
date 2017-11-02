@@ -1,0 +1,13 @@
+ <div class="mainBlock">
+    <div (click)="alone()" class="alone blockHeight center img">
+        <p class="aloneText">单人匹配</p>
+    </div>
+    <div (click)="friend()" class="friend blockHeight center img">
+        <p class="aloneText verticalText">好友同玩</p>
+    </div>
+    <div class="solo blockHeight center img">
+        <p class="aloneText verticalText">SOLO</p>
+    </div>
+</div> 
+
+<app-dialog *ngIf="isDialogView" (close)="close()" [dialogModel]="dialogModel"></app-dialog>

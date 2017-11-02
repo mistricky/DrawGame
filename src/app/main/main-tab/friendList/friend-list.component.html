@@ -1,0 +1,13 @@
+<div class="friendList">  
+    <div class="back">
+        <img (click)="back()" src="../../../../assets/imgs/back.png" alt="">
+        <div>
+             <div class="ui input">
+                <input #searchValue type="text" placeholder="好友ID">
+            </div>
+            <button class="ui button" (click)="viewSearchFriend()" >+加好友</button>
+        </div>
+    </div>
+    <friend-info [btnClick]="chatFriend" [isViewFriendList]="isViewFriendList" [friendList]="friendList" [btnName]="'发送消息'" [pName]="pName"></friend-info>
+</div>
+<search-friend *ngIf="isViewSearchFriend" (hiddenSearchFriend)="hiddenSearchFriend()" [searchName]="searchValue.value"></search-friend>
