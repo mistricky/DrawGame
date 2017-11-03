@@ -64,7 +64,8 @@ export class FriendListComponent implements OnInit{
     }
 
     //聊天点击按钮
-    chatFriend(){
-        alert('chat');
+    chatFriend(userName:string){
+        //导航至联系面板
+        this.router.navigate(['main/msg-pane'],{queryParams:{userName:userName}});
     }
 }

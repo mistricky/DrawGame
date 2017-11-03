@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ChatService } from './../../../../services/chat.service';
 import { User } from './../../../../services/user.service';
 import { Component, Input, AfterViewInit, OnInit, OnChanges } from '@angular/core';
@@ -22,7 +23,7 @@ export class FriendInfoComponent implements AfterViewInit,OnInit,OnChanges{
     @Input()
     searchName:string;
 
-    constructor(private http:Http, private user:User, private chatService:ChatService){
+    constructor(private http:Http, private user:User, private chatService:ChatService,private router:Router){
         
     }
 

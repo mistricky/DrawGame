@@ -1,3 +1,5 @@
+import { MsgItemComponent } from './msgItem/msgItem.component';
+import { MsgService } from './services/msg.service';
 import { MsgPaneComponent } from './msgPane/msg-pane.component';
 import { OrganizeService } from './services/organize.service';
 import { LiteFriendList } from './liteFriendList/lite-friend-list.component';
@@ -39,7 +41,8 @@ import { HeaderBarComponent } from './main/header-bar/header-bar.component';
     GamePaneComponent,
     FriendGame,
     LiteFriendList,
-    MsgPaneComponent
+    MsgPaneComponent,
+    MsgItemComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { HeaderBarComponent } from './main/header-bar/header-bar.component';
   providers: [
     {provide:User,useClass:User},
     {provide:ChatService,useClass:ChatService},
-    {provide:OrganizeService,useClass:OrganizeService}
+    {provide:OrganizeService,useClass:OrganizeService},
+    {provide:MsgService,useClass:MsgService}
   ],
   bootstrap: [AppComponent]
 })

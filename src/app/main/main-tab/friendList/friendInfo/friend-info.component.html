@@ -10,7 +10,7 @@
             <!--发送信息按钮  -->
             <div>
                 <button class="ui button" [class.green]="val.isLine">{{val.isLine?"在线":"离线"}}</button>
-                <div (click)="btnClick()" class="ui button sendBtn positive">{{btnName}}</div>
+                <div (click)="btnClick(val.user)" class="ui button sendBtn positive">{{btnName}}</div>
             </div>
         </div>
     </div>

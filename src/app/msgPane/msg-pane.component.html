@@ -1,16 +1,39 @@
-<div class="box">
-    <div class="left">
-        <div class="userList">
-            <div class="userItem">
-                <div class="headImg">
-                    <img src="../../assets/imgs/headImg.jpg" alt="">
+<div id="container">
+    <div id="headerBar"><button class="ui button red" (click)="closePane()">x</button><div class="title">和{{selectUserName}}的会话</div></div>
+    <div class="box" *ngIf="chatUsers.length != 0">
+        <div class="xleft">
+            <div class="userList" #userList>
+
+                <!--列表项目  -->
+                <div class="userItem" (click)="changeBg($event.target,user.userName)" *ngFor="let user of chatUsers">
+                    <div class="headImg">
+                        <img [src]="user.headImg" alt="">
+                    </div>
+                    <div class="userInfo">
+                        <p class="userName">{{user.userName}}</p>
+                        <button class="isLine ui button">{{user.isLine?"在线":"离线"}}</button>
+                    </div>
                 </div>
-                <div class="userInfo">
-                    <p class="userName">小胖娃</p>
-                    <button class="isLine ui button">在线</button>
+
+                <div id="bar" [style.top.px]='barLocation'></div>
+            </div>
+        </div>
+        <div class="xright">
+            <!--聊天面板  -->
+            <div class="content" #content>
+                <div *ngFor="let item of msgItemArr">
+                    <msg-item [isLeft]="item.getIsLeft()" [msg]="item.getMsg()"></msg-item>
                 </div>
+            </div>
+            <div class="textField">
+                <div class="ui input">
+                    <input type="text" #message>
+                </div>
+                <button (click)='sendMessage(message.value);clearInput(message)' class="ui button">发送</button>
             </div>
         </div>
     </div>
-    <div class="right"></div>
+    <div class="text" *ngIf="chatUsers.length == 0">
+        <p>暂时没有联系记录</p>
+    </div>
 </div>

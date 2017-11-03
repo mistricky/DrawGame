@@ -1,4 +1,5 @@
-import { Router } from '@angular/router';
+import { MsgService } from './../services/msg.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import { DialogClose } from './../dialog/dialog-close';
 import { DialogModelSchema } from './../interfaces/dialog-schema.interface';
 import { ChatService } from './../services/chat.service';
@@ -11,7 +12,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class MainComponent extends DialogClose implements OnInit {
 
-  constructor(private chatService:ChatService, private router:Router) {
+  constructor(private chatService:ChatService, private router:Router,private msgService:MsgService, private activatedRoute:ActivatedRoute) {
     super();
     //连接服务器
     chatService.connect();
@@ -35,5 +36,18 @@ export class MainComponent extends DialogClose implements OnInit {
         }}
       });
     })
+
+    this.msgService.getMsg()
+    .subscribe(msg => {
+      //判断是否消息路由
+      if(window.location.pathname != '/main/msg-pane'){
+        console.log("未读消息");
+        this.msgService.addMsgCache(msg);
+        this.msgService.setMsgCount();
+        console.log(this.msgService.getMsgCount());
+      }     
+    })
+
   }
+  
 }

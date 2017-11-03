@@ -1,0 +1,9 @@
+<div class="msgItem" [ngClass]="{itemLeft:isLeft,itemRight:!isLeft}">
+    <div *ngIf="isLeft" class="msgItemUserInfo">
+        <img src="../../assets/imgs/headImg.jpg" alt="">
+    </div>
+    <div class="ui basic label msgBubble" [ngClass]="{left:isLeft,right:!isLeft,pointing:true,blueBackground:!isLeft,black:isLeft}">{{msg}}</div>
+    <div *ngIf="!isLeft" class="msgItemUserInfo">
+        <img src="../../assets/imgs/headImg.jpg" alt="">
+    </div>
+</div>
